@@ -1,0 +1,579 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hugo Project</title>
+    <link href="//maxcdn.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.2.0/css/all.css">
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/magnific-popup.js/1.1.0/magnific-popup.css" />
+    <link href="https://fonts.googleapis.com/css2?family=Black+Ops+One&display=swap" rel="stylesheet"> 
+    <link rel="stylesheet" href="style.css">
+    <style>
+        .bg-overlay{
+          background: rgba(0,0,0, .7);
+          position: absolute;
+          top: -60px;
+          bottom: -100px;
+          left: 0;
+          right:0;
+          z-index: 0;
+        }
+        video {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            min-width: 100%;
+            min-height: 100%;
+            width: auto;
+            height: auto;
+            z-index: -100;
+            -moz-transform: translateX(-50%) translateY(-50%);
+            -ms-transform: translateX(-50%) translateY(-50%);
+            -webkit-transform: translateX(-50%) translateY(-50%);
+            transform: translateX(-50%) translateY(-50%);
+            background: url(facade.jpg) no-repeat;
+            background-size: cover;
+            -webkit-transition: 1s opacity;
+            transition: 1s opacity;
+            z-index: 0;
+        }
+        .ov-hidden{
+          overflow: hidden;
+        }
+      </style>
+</head>
+<body>
+
+
+    <nav class="navbar navbar-light bg-white navbar-expand-md hugo-color-1">
+        <div class="container">
+          <a class="navbar-brand" href="#">
+            <!--
+            <img src="http://via.placeholder.com/102x30/007bff/ffffff?text=logo" height="30" alt="image">    
+            -->  
+            <h5 class="text-white">LOGO</h5>
+          </a>
+          <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav3" aria-controls="navbarNav3" aria-expanded="false" aria-label="Toggle navigation" style="background-color: #fff;">
+            <span class="navbar-toggler-icon" style="background-color: #fff;"></span>
+          </button>
+          <div class="collapse navbar-collapse" id="navbarNav3">
+            <ul class="navbar-nav ml-auto">
+              <li class="nav-item active">
+                <a class="nav-link text-white" href="#">Inicio <span class="sr-only">(current)</span></a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link text-white" href="#">Nosotros</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link text-white" href="#">Galleria</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link text-white" href="#">Proycetos</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link text-white" href="#">Contacto</a>
+              </li>
+            </ul>
+            <!-- <a class="btn btn-outline-dark ml-md-3" href="#">Button</a> -->
+          </div>
+        </div>
+      </nav>
+      <section class="ov-hidden pt-5 pb-5 bg-dark position-relative" style="min-height:100vh; background-image: url(https://images.unsplash.com/photo-1498050108023-c5249f4df085?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1652&q=80); background-size: cover;">
+
+        <!--video component -->
+        <video playsinline="" autoplay="true" muted="true" loop="true" poster="https://images.unsplash.com/photo-1498050108023-c5249f4df085?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1652&q=80" id="bgvid">
+          <!--<source src="http://casagiacometti.com/rain.webm" type="video/webm">-->
+          <source src="./video/video.mp4" type="video/mp4">
+            <!--<source srcRA="rain.mp4" type="video/mp4">-->
+          </video>
+          <div class="bg-overlay"></div>
+
+        <div class="container pt-5 pb-5 position-relative">
+          <div class="row d-flex justify-content-between pt-lg-5 align-items-center">
+            <div class="col-xl-5 col-lg-6 col-md-7 text-center text-lg-left mb-5 mb-lg-0">
+              <h1 class="display-3 font-weight-bold text-white" data-aos="fade-up">Crea de forma innovadora</h1>
+              <div class="my-4" data-aos="fade-up">
+                <p class="lead text-white">Lorem ipsum dolor sit amet, consectetur adipiscing eliterat sed sem sagittis cursus.</p>
+              </div>
+              <div class="d-flex justify-content-center justify-content-lg-start" data-aos="fade-up">
+                <div class="d-flex mr-2">
+                  <i class="fas fa-star fa-lg text-warning m-1"></i>
+                  <i class="fas fa-star fa-lg text-warning m-1"></i>
+                  <i class="fas fa-star fa-lg text-warning m-1"></i>
+                  <i class="fas fa-star fa-lg text-warning m-1"></i>
+                  <i class="fas fa-star fa-lg text-warning m-1"></i>
+                </div>
+                <span class="text-white">(Average score: 4.9/5)</span>
+              </div>
+            </div>
+            <div class="col">
+              <div class="row justify-content-center">
+                <div class="col-xl-8 col-md-10">
+
+                  <form class="position-relative d-block" data-aos="fade-up">
+                    <div class="form-group">
+                      <label class="text-white" for="course-name-1">Nombre</label>
+                      <input name="course-name" id="course-name-1" type="text" class="form-control form-control-lg" placeholder="Ingresa tu nombre">
+                    </div>
+                    <div class="form-group">
+                      <label class="text-white" for="course-email-1">Correo Electronico</label>
+                      <input name="course-email" id="course-email-1" type="email" class="form-control form-control-lg" placeholder="ejemplo@gmail.com">
+                    </div>
+                    <div class="form-group">
+                        <label class="text-white" for="course-phone-1">Correo Electronico</label>
+                        <input name="course-number" id="course-phone-1" type="number" class="form-control form-control-lg" placeholder="(222) 154 85 96">
+                      </div>
+                    <!--
+                    <div class="form-group">
+                      <div class="row">
+                        <div class="col-12">
+                          <div class="form-group mb-1">
+                            <label class="text-white">Skill Level:</label>
+                          </div>
+                        </div>
+                        <div class="col">
+                          <div class="form-group rounded bg-white p-2 border">
+                            <div class="custom-control custom-radio">
+                              <input type="radio" id="course-radio-beginner-1" name="course-radio-1" class="custom-control-input">
+                              <label class="custom-control-label" for="course-radio-beginner-1">Beginner</label>
+                            </div>
+                          </div>
+                        </div>
+                        <div class="col">
+                          <div class="form-group rounded bg-white p-2 border">
+                            <div class="custom-control custom-radio">
+                              <input type="radio" id="course-radio-advanced-1" name="course-radio-1" class="custom-control-input">
+                              <label class="custom-control-label" for="course-radio-advanced-1">Advanced</label>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                    -->
+                    <div class="form-group text-center">
+                      <button class="btn btn-lg btn-success btn-block mb-2" type="submit">Envia para una cotización</button>
+                      <small class="text-white">Nos comunicaremos contigo lo mas pronto posible.</small>
+                    </div>
+                  </form>
+
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="pt-5 pb-5 bg-light" style="">
+        <div class="container  pt-5 pb-5">
+          <div class="row d-flex justify-content-between">
+
+              <div class="col-md-3">
+                <div class="card profile-card-5" data-aos="fade-up">
+    		        <div class="card-img-block">
+    		            <img class="card-img-top" src="https://www.fanucamerica.com/images/default-source/default-album/robots.jpg?sfvrsn=5cefb7a3_0" alt="Card image cap">
+    		        </div>
+                    <div class="card-body pt-0">
+                    <h5 class="card-title">Robot</h5>
+                    <p class="card-text">
+                    With more than 100 models, FANUC offers the widest range of industrial robots in the world, ranging from 0.5kg-2300kg in payload for any application or industry.
+                    </p>
+                    <a href="#" class="btn btn-primary">Más Info</a>
+                  </div>
+                </div>
+              </div>
+
+              <div class="col-md-3">
+                <div class="card profile-card-5" data-aos="fade-up">
+    		        <div class="card-img-block">
+    		            <img class="card-img-top" src="https://www.fanucamerica.com/images/default-source/default-album/cnc.jpg?sfvrsn=edbc45e_0" alt="Card image cap">
+    		        </div>
+                    <div class="card-body pt-0">
+                    <h5 class="card-title">Robot</h5>
+                    <p class="card-text">
+                    With more than 100 models, FANUC offers the widest range of industrial robots in the world, ranging from 0.5kg-2300kg in payload for any application or industry.
+                    </p>
+                    <a href="#" class="btn btn-primary">Más Info</a>
+                  </div>
+                </div>
+              </div>
+
+              <div class="col-md-3">
+                <div class="card profile-card-5" data-aos="fade-up">
+    		        <div class="card-img-block">
+    		            <img class="card-img-top" src="https://www.fanucamerica.com/images/default-source/default-album/robomachine.jpg?sfvrsn=120ca571_0" alt="Card image cap">
+    		        </div>
+                    <div class="card-body pt-0">
+                    <h5 class="card-title">Robot</h5>
+                    <p class="card-text">
+                    With more than 100 models, FANUC offers the widest range of industrial robots in the world, ranging from 0.5kg-2300kg in payload for any application or industry.
+                    </p>
+                    <a href="#" class="btn btn-primary">Más Info</a>
+                  </div>
+                </div>
+              </div>
+
+              <div class="col-md-3">
+                <div class="card profile-card-5" data-aos="fade-up">
+    		        <div class="card-img-block">
+    		            <img class="card-img-top" src="https://www.fanucamerica.com/images/default-source/default-album/robonano-yellow-bg.jpg?sfvrsn=786dc7f7_2" alt="Card image cap">
+    		        </div>
+                    <div class="card-body pt-0">
+                    <h5 class="card-title">Robot</h5>
+                    <p class="card-text">
+                    With more than 100 models, FANUC offers the widest range of industrial robots in the world, ranging from 0.5kg-2300kg in payload for any application or industry.
+                    </p>
+                    <a href="#" class="btn btn-primary">Más Info</a>
+                  </div>
+                </div>
+              </div>
+
+              <!--
+              <div class="col-md-5" data-aos="fade-up">
+              <div id="carouselExampleTestimonials" class="carousel slide" data-ride="carousel">
+                <div class="carousel-inner">
+                  <div class="carousel-item">
+                    <div class="container-fluid">
+                      <div class="row   justify-content-center d-flex  ">
+                        <div class="col-md-12  card px-5 text-dark py-5">
+                          <div class="d-flex justify-content-center justify-content-lg-start">
+                            <div class="d-flex mr-2">
+                              <i class="fas fa-star text-warning mr-1"></i>
+                              <i class="fas fa-star text-warning mr-1"></i>
+                              <i class="fas fa-star text-warning mr-1"></i>
+                              <i class="fas fa-star text-warning mr-1"></i>
+                              <i class="fas fa-star text-warning mr-1"></i>
+                            </div>
+                          </div>
+                          <blockquote class="blockquote blockquote-reverse mt-4">
+                            <p class="lead font-weight-bold mt-2">"Lorem ipsum dolor sit amet, consectetur adipiscing eliterat sed".</p>
+                            <div class="mt-3 d-flex align-items-center pt-2">
+                              <div class="mr-3">
+                                <img class="d-block img-fluid rounded-circle" src="https://via.placeholder.com/40x40/5fa9f8/ffffff " srcset="https://via.placeholder.com/120x120/5fa9f8/ffffff 2x" alt="user">
+                              </div>
+                              <div class="d-block">
+                                <p class="mb-0">User Name</p>
+                                <p class="small">Designer</p>
+                              </div>
+                            </div>
+                          </blockquote>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="carousel-item">
+                    <div class="container-fluid">
+                      <div class="row   justify-content-center d-flex  ">
+                        <div class="col-md-12  card px-5 text-dark py-5">
+                          <div class="d-flex justify-content-center justify-content-lg-start">
+                            <div class="d-flex mr-2">
+                              <i class="fas fa-star text-warning mr-1"></i>
+                              <i class="fas fa-star text-warning mr-1"></i>
+                              <i class="fas fa-star text-warning mr-1"></i>
+                              <i class="fas fa-star text-warning mr-1"></i>
+                              <i class="fas fa-star text-warning mr-1"></i>
+                            </div>
+                          </div>
+                          <blockquote class="blockquote blockquote-reverse mt-4">
+                            <p class="lead font-weight-bold mt-2">"Lorem ipsum dolor sit amet, consectetur adipiscing eliterat sed".</p>
+                            <div class="mt-3 d-flex align-items-center pt-2">
+                              <div class="mr-3">
+                                <img class="d-block img-fluid rounded-circle" src="https://via.placeholder.com/40x40/5fa9f8/ffffff " srcset="https://via.placeholder.com/120x120/5fa9f8/ffffff 2x" alt="user">
+                              </div>
+                              <div class="d-block">
+                                <p class="mb-0">User Name</p>
+                                <p class="small">Designer</p>
+                              </div>
+                            </div>
+                          </blockquote>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="carousel-item active">
+                    <div class="container-fluid">
+                      <div class="row   justify-content-center d-flex  ">
+                        <div class="col-md-12  card px-5 text-dark py-5">
+                          <div class="d-flex justify-content-center justify-content-lg-start">
+                            <div class="d-flex mr-2">
+                              <i class="fas fa-star text-warning mr-1"></i>
+                              <i class="fas fa-star text-warning mr-1"></i>
+                              <i class="fas fa-star text-warning mr-1"></i>
+                              <i class="fas fa-star text-warning mr-1"></i>
+                              <i class="fas fa-star text-warning mr-1"></i>
+                            </div>
+                          </div>
+                          <blockquote class="blockquote blockquote-reverse mt-4">
+                            <p class="lead font-weight-bold mt-2">"Lorem ipsum dolor sit amet, consectetur adipiscing eliterat sed".</p>
+                            <div class="mt-3 d-flex align-items-center pt-2">
+                              <div class="mr-3">
+                                <img class="d-block img-fluid rounded-circle" src="https://via.placeholder.com/40x40/5fa9f8/ffffff " srcset="https://via.placeholder.com/120x120/5fa9f8/ffffff 2x" alt="user">
+                              </div>
+                              <div class="d-block">
+                                <p class="mb-0">User Name</p>
+                                <p class="small">Designer</p>
+                              </div>
+                            </div>
+                          </blockquote>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div> -->
+          </div>
+        </div>
+      </section>
+      
+     
+      <section class=" pb-5 bg-light" style="height: 500px;"> <!--pt-5--> 
+        <div class="container  pt-5 pb-5">
+          <div data-aos="fade-up">
+
+            <div class="grid">
+                <figure class="effect-ravi">
+                    <img src="https://app01.balluff.com/image-fit/0-457/fileadmin/user_upload/home/home_mobile-equipment.jpg" alt="img12" />
+                    <figcaption>
+                        <div>
+                            <h2 style="color: #000;">Trucks</h2>
+                            <p style="color: #000;">Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolorum delectus quia tenetur praesentium perspiciatis, inventore in necessitatibus? Cumque, pariatur mollitia magni, atque veritatis neque rem, doloremque commodi id distinctio aliquid!</p>
+                        </div>
+                        <a href="#">View more</a>
+                    </figcaption>
+                </figure>
+                <figure class="effect-ravi">
+                    <img src="https://app01.balluff.com/image-fit/0-216/fileadmin/user_upload/solutions/home_automotiv.png" alt="img1" />
+                    <figcaption>
+                        <div>
+                            <h2 style="color: #000;">Car</h2>
+                            <p style="color: #000;">Lorem ipsum dolor sit amet consectetur adipisicing elit. Recusandae ipsam repellat ab, quo fuga id.</p>
+                        </div>
+                        <a href="#">View more</a>
+                    </figcaption>
+                </figure>
+            </div>
+
+          </div>
+        </div>
+      </section>
+
+      
+        <div class="container pb-5" data-aos="fade-up">
+            <h2 class="slider-title">Calidad en nuestras herramientas de trabajo</h2>
+            <section class="customer-logos slider">
+               <div class="slide"><img src="https://image.freepik.com/free-vector/luxury-letter-e-logo-design_1017-8903.jpg"></div>
+               <div class="slide"><img src="http://www.webcoderskull.com/img/logo.png"></div>
+               <div class="slide"><img src="https://image.freepik.com/free-vector/3d-box-logo_1103-876.jpg"></div>
+               <div class="slide"><img src="https://image.freepik.com/free-vector/blue-tech-logo_1103-822.jpg"></div>
+               <div class="slide"><img src="https://image.freepik.com/free-vector/colors-curl-logo-template_23-2147536125.jpg"></div>
+               <div class="slide"><img src="https://image.freepik.com/free-vector/abstract-cross-logo_23-2147536124.jpg"></div>
+               <div class="slide"><img src="https://image.freepik.com/free-vector/football-logo-background_1195-244.jpg"></div>
+               <div class="slide"><img src="https://image.freepik.com/free-vector/background-of-spots-halftone_1035-3847.jpg"></div>
+               <div class="slide"><img src="https://image.freepik.com/free-vector/retro-label-on-rustic-background_82147503374.jpg"></div>
+            </section>
+        </div>
+
+        <section class="pb-5 pt-5 bg-light">  
+            <div class="container">
+                <div class="row">
+                   <div class="col-lg-12 text-center my-2">
+                      <h4 class="border-bottom border-dark p-2">Nuestros Proyectos</h4>
+                   </div>
+                </div>
+                <div class="portfolio-menu mt-2 mb-4">
+                   <ul>
+                      <li class="btn btn-outline-dark active" data-filter="*">All</li>
+                      <li class="btn btn-outline-dark" data-filter=".gts">Girls</li>
+                      <li class="btn btn-outline-dark" data-filter=".lap">Laptops</li>
+                      <li class="btn btn-outline-dark text" data-filter=".selfie">Celulare</li>
+                   </ul>
+                </div>
+                <div class="portfolio-item row">
+                   <div class="item selfie col-lg-3 col-md-4 col-6 col-sm">
+                      <a href="https://image.freepik.com/free-photo/stylish-young-woman-with-bags-taking-selfie_23-2147962203.jpg" class="fancylight popup-btn" data-fancybox-group="light"> 
+                      <img class="img-fluid" src="https://image.freepik.com/free-photo/stylish-young-woman-with-bags-taking-selfie_23-2147962203.jpg" alt="">
+                      </a>
+                   </div>
+                   <div class="item gts col-lg-3 col-md-4 col-6 col-sm">
+                      <a href="https://image.freepik.com/free-photo/pretty-girl-near-car_1157-16962.jpg" class="fancylight popup-btn" data-fancybox-group="light"> 
+                      <img class="img-fluid" src="https://image.freepik.com/free-photo/pretty-girl-near-car_1157-16962.jpg" alt="">
+                      </a>
+                   </div>
+                   <div class="item selfie col-lg-3 col-md-4 col-6 col-sm">
+                      <a href="https://image.freepik.com/free-photo/blonde-tourist-taking-selfie_23-2147978899.jpg" class="fancylight popup-btn" data-fancybox-group="light">
+                      <img class="img-fluid" src="https://image.freepik.com/free-photo/blonde-tourist-taking-selfie_23-2147978899.jpg" alt="">
+                      </a>
+                   </div>
+                   <div class="item gts col-lg-3 col-md-4 col-6 col-sm">
+                      <a href="https://image.freepik.com/free-photo/cute-girls-oin-studio_1157-18211.jpg" class="fancylight popup-btn" data-fancybox-group="light">
+                      <img class="img-fluid" src="https://image.freepik.com/free-photo/cute-girls-oin-studio_1157-18211.jpg" alt="">
+                      </a>
+                   </div>
+                   <div class="item gts col-lg-3 col-md-4 col-6 col-sm">
+                      <a href="https://image.freepik.com/free-photo/stylish-pin-up-girls_1157-18451.jpg" class="fancylight popup-btn" data-fancybox-group="light">
+                      <img class="img-fluid" src="https://image.freepik.com/free-photo/stylish-pin-up-girls_1157-18451.jpg" alt="">
+                      </a>
+                   </div>
+                   <div class="item gts col-lg-3 col-md-4 col-6 col-sm">
+                      <a href="https://image.freepik.com/free-photo/stylish-pin-up-girl_1157-18940.jpg" class="fancylight popup-btn" data-fancybox-group="light">
+                      <img class="img-fluid" src="https://image.freepik.com/free-photo/stylish-pin-up-girl_1157-18940.jpg" alt="">
+                      </a>
+                   </div>
+                   <div class="item lap col-lg-3 col-md-4 col-6 col-sm">
+                      <a href="https://image.freepik.com/free-photo/digital-laptop-working-global-business-concept_53876-23438.jpg" class="fancylight popup-btn" data-fancybox-group="light">
+                      <img class="img-fluid" src="https://image.freepik.com/free-photo/digital-laptop-working-global-business-concept_53876-23438.jpg" alt="">
+                      </a>
+                   </div>
+                   <div class="item lap col-lg-3 col-md-4 col-6 col-sm">
+                      <a href="https://image.freepik.com/free-psd/set-digital-devices-screen-mockup_53876-76507.jpg" class="fancylight popup-btn" data-fancybox-group="light">
+                      <img class="img-fluid" src="https://image.freepik.com/free-psd/set-digital-devices-screen-mockup_53876-76507.jpg" alt="">
+                      </a>
+                   </div>
+                </div>
+             </div>
+
+        </section>
+      
+      
+     
+      <section class="mb-0 mt-0">
+        <div class="footer text-white">
+          <div class="   bg-dark pt-5 pb-5">
+            <div class="container">
+              <div class="row mb-5">
+                <div class="col">
+                  <div class="card card-body border-0 mb-0 bg-info text-light px-md-5 py-md-4 shadow-lg" style="overflow:hidden" data-aos="zoom-out-down">
+                    <div class="position-relative d-flex flex-column py-md-2 flex-md-row justify-content-between align-items-center">
+                      <div class="h3 text-center mb-md-0">....</div>
+                      <a href="https://gumroad.com/blueprintsapp" class="btn btn-lg btn-light py-md-3 px-md-5 text-info font-weight-bold">
+                        ....
+                      </a>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="row">
+                <div class="col-xs-6 col-sm-3">
+                  <a href="#">
+                    <svg class="d-block mb-4" width="36" height="36" viewBox="0 0 612 612" xmlns="http://www.w3.org/2000/svg" focusable="false">
+                      <path fill="currentColor" d="M510 8a94.3 94.3 0 0 1 94 94v408a94.3 94.3 0 0 1-94 94H102a94.3 94.3 0 0 1-94-94V102a94.3 94.3 0 0 1 94-94h408m0-8H102C45.9 0 0 45.9 0 102v408c0 56.1 45.9 102 102 102h408c56.1 0 102-45.9 102-102V102C612 45.9 566.1 0 510 0z"></path>
+                      <path fill="currentColor" d="M196.77 471.5V154.43h124.15c54.27 0 91 31.64 91 79.1 0 33-24.17 63.72-54.71 69.21v1.76c43.07 5.49 70.75 35.82 70.75 78 0 55.81-40 89-107.45 89zm39.55-180.4h63.28c46.8 0 72.29-18.68 72.29-53 0-31.42-21.53-48.78-60-48.78h-75.57zm78.22 145.46c47.68 0 72.73-19.34 72.73-56s-25.93-55.37-76.46-55.37h-74.49v111.4z"></path>
+                    </svg>
+                  </a>
+                  <address class="color-light-20">
+                    Puebla
+                    <br> Puebla
+                  </address>
+                  <ul class="list-unstyled list-light">
+                    <li>
+                      <a href="#">Lorem ipsum dolor sit amet.</a>
+                    </li>
+                  </ul>
+                </div>
+                <div class="col-xs-6 col-sm-3">
+                  <h4 class="my-2">Product</h4>
+                  <ul class="list-unstyled list-light">
+                    <li>
+                      <a href="#">Pricing</a>
+                    </li>
+                    <li>
+                      <a href="#">Features</a>
+                    </li>
+                    <li>
+                      <a href="#">Customers</a>
+                    </li>
+                    <li>
+                      <a href="#">Store</a>
+                    </li>
+                  </ul>
+                </div>
+                <br style="clear:both" class="hidden-sm-up">
+                <div class="col-xs-6 col-sm-3">
+                  <h4 class="my-2">Company</h4>
+                  <ul class="list-unstyled list-light">
+                    <li>
+                      <a href="#">About Us</a>
+                    </li>
+                    <li>
+                      <a href="#">Blog</a>
+                    </li>
+                    <li>
+                      <a href="#">Careers</a>
+                    </li>
+                    <li>
+                      <a href="#">Press</a>
+                    </li>
+                    <li>
+                      <a href="#">Events</a>
+                    </li>
+                    <li>
+                      <a href="#">Contact</a>
+                    </li>
+                  </ul>
+                </div>
+                <div class="col-xs-6 col-sm-3">
+                  <h4 class="my-2">Connect</h4>
+                  <ul class="list-unstyled list-light">
+                    <li>
+                      <a href="#">Support</a>
+                    </li>
+                    <li>
+                      <a href="#">Social</a>
+                    </li>
+                    <li>
+                      <a href="#">Community</a>
+                    </li>
+                  </ul>
+                  <p class="color-light mt-2">Stay up-to-date!</p>
+                  <form>
+                    <div class="form-group">
+                      <div class="input-group mb-3">
+                        <input type="text" class="form-control form-control-sm" placeholder="Email" aria-label="Email" aria-describedby="basic-addon2">
+                        <div class="input-group-append">
+                          <button class="btn btn-primary btn-sm" type="button">Ok</button>
+                        </div>
+                      </div>
+                    </div>
+                  </form>
+                </div>
+              </div>
+              <hr>
+              <div class="row f-flex justify-content-center" style="">
+                <div class="col text-center  text-secondary my-1">
+                  <p class="mt-2  text-white"> © Copyright 2020 • Aldos Web Developer |
+                    <a class=" " href="#">Dudas</a> |
+                    <a class=" " href="#">Contacto</a>
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+
+
+
+
+
+
+
+    
+    <script src="//cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js"></script>
+      <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.2/js/bootstrap.min.js"></script>
+      <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+      <script>
+        AOS.init({
+          duration: 1200,
+        })
+      </script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.6.0/slick.js"></script> 
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.isotope/3.0.6/isotope.pkgd.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/magnific-popup.js/1.1.0/jquery.magnific-popup.js"></script> 
+    <script src="app.js"></script>
+    
+</body>
+</html>
