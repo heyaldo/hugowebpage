@@ -1,5 +1,6 @@
 body {
     font-family: 'Black Ops One', cursive;
+    scroll-behavior: smooth;
 }
 
 .hugo-color-1 {
@@ -568,16 +569,109 @@ figure.effect-ravi:hover p {
     background: linear-gradient(#400080, transparent), linear-gradient(200deg, #d047d1, #ff0000, #ffff00);
     }
 
+    .extra1 {
+        padding-bottom: 2rem;
+    }
+
     @media (max-width: 600px) {
         .query1 {
             font-size: 3.4rem;
         }
         .query2 {
-            margin-top: 200px;
-            margin-bottom: 200px;
+            margin-top: 225px;
+            margin-bottom: 225px;
+        }
+        .query3 {
+            margin-top: 10rem;
+        }
+        .extra1 {
+            padding-bottom: 0rem;
         }
 
         .ul-style {
             display: block;
         }
+
+        .ul-style > .li-style{
+            list-style: none;
+            margin: 12px 40px;    
+        }
+
+        figure.effect-ravi figcaption>div {
+            bottom: 15px;
+        }
     }
+      
+      .brand-box {
+        -webkit-box-align: center;
+        align-items: center;
+        /*background: #E3E3E3;*/
+        display: -webkit-box;
+        display: flex;
+        /*height: 100vh;*/
+        -webkit-box-pack: center;
+        justify-content: center;
+        margin: 40px auto;
+      }
+
+      @-webkit-keyframes scroll {
+        0% {
+          -webkit-transform: translateX(0);
+                  transform: translateX(0);
+        }
+        100% {
+          -webkit-transform: translateX(calc(-250px * 7));
+                  transform: translateX(calc(-250px * 7));
+        }
+      }
+      
+      @keyframes scroll {
+        0% {
+          -webkit-transform: translateX(0);
+                  transform: translateX(0);
+        }
+        100% {
+          -webkit-transform: translateX(calc(-250px * 7));
+                  transform: translateX(calc(-250px * 7));
+        }
+      }
+      .brands {
+        background: white;
+        box-shadow: 0 10px 20px -5px rgba(0, 0, 0, 0.125);
+        height: 100px;
+        margin: auto;
+        overflow: hidden;
+        position: relative;
+        width: 960px;
+      }
+      .brands::before, .brands::after {
+        background: -webkit-gradient(linear, left top, right top, from(white), to(rgba(255, 255, 255, 0)));
+        background: linear-gradient(to right, white 0%, rgba(255, 255, 255, 0) 100%);
+        content: "";
+        height: 100px;
+        position: absolute;
+        width: 200px;
+        z-index: 2;
+      }
+      .brands::after {
+        right: 0;
+        top: 0;
+        -webkit-transform: rotateZ(180deg);
+                transform: rotateZ(180deg);
+      }
+      .brands::before {
+        left: 0;
+        top: 0;
+      }
+      .brands .brand-track {
+        -webkit-animation: scroll 40s linear infinite;
+                animation: scroll 40s linear infinite;
+        display: -webkit-box;
+        display: flex;
+        width: calc(250px * 14);
+      }
+      .brands .brand {
+        height: 100px;
+        width: 250px;
+      }
+      
